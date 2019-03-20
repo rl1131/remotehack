@@ -1,6 +1,6 @@
 # Hack Simple Remote Controls
 
-This tutorial is intended as a tutorial and utility for
+This is intended as a tutorial and utility for
 people who want to add a remote control to the Polyglot
 Node Server here:
 
