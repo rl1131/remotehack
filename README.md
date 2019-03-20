@@ -1,5 +1,9 @@
 # Hack Simple Remote Controls
 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/rl1131/udi-wemo-poly/blob/master/LICENSE)
+
+### Overview
+
 This is intended as a tutorial and utility for
 people who want to add a remote control to the Polyglot
 Node Server here:
