@@ -43,11 +43,9 @@ The process for reverse engineering a remote control:
 on Amazon for about $25).
 
 2.  Use [Universal Radio Hacker](https://github.com/jopohl/urh)
-to record the remote control
-buttons.  This very sophomoric video is a quick guide on how to 
-record each button and decode it to .wav file.  The .wav file
-must be demodulated (see the video) for the utility here 
-to work [How-To Video](https://youtu.be/65MvhyfXh6w)
+to record the remote control buttons.  Below is a sophomoric video 
+that is a quick guide on how to record and demodulate each button 
+then save to a .wav file:  [How-To Video](https://youtu.be/65MvhyfXh6w)
 
 3.  Build a Python file similar to hbreeze_example.py here that
 specifies all of the information about your remote control
