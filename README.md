@@ -4,6 +4,8 @@ This is intended as a tutorial and utility for
 people who want to add a remote control to the Polyglot
 Node Server here:
 
+[PDM Remote Node Server](https://github.com/rl1131/udi-pdmremote-poly)
+
 This node server is for use with the ISY Home Automation
 controller. 
 
@@ -30,22 +32,22 @@ emulating the remote control.
 There is also a Python library class that will transmit
 the remote commands if a simple radio is connected up to
 a Raspberry Pi computer.  The code is simple and could be
-ported if you so desire.
+ported if you so desire.  An example of connecting a transmitter
+to a Raspberry Pi can be found here:
+
+[PDM Remote Node Server](https://github.com/rl1131/udi-pdmremote-poly)
 
 The process for reverse engineering a remote control:
 
 1.  Acquire an RTL-SDR radio (several versions available
 on Amazon for about $25).
 
-2.  Use "Universal Radio Hacker" to record the remote control
+2.  Use [Universal Radio Hacker](https://github.com/jopohl/urh)
+to record the remote control
 buttons.  This very sophomoric video is a quick guide on how to 
 record each button and decode it to .wav file.  The .wav file
 must be demodulated (see the video) for the utility here 
-to work.  The utility and video:
-
-[Universal Radio Hacker](https://github.com/jopohl/urh)
-[How-To Video](https://youtu.be/65MvhyfXh6w)
-
+to work [How-To Video](https://youtu.be/65MvhyfXh6w)
 
 3.  Build a Python file similar to hbreeze_example.py here that
 specifies all of the information about your remote control
