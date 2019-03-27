@@ -10,7 +10,10 @@ Node Server here:
 
 [PDM Remote Node Server](https://github.com/rl1131/udi-pdmremote-poly)
 
-This code is useful, at least as an example, for 
+This node server is for use with the ISY Home Automation
+controller. 
+
+This code is probably useful, at least as an example, for 
 anyone trying to hack 315 MHz or 433 MHz remote controls 
 that use simple OOK (on/off keying), or PDM (pulse density 
 modulation) modulation.
