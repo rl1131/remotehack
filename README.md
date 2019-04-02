@@ -2,7 +2,7 @@
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/rl1131/udi-wemo-poly/blob/master/LICENSE)
 
-### Overview
+## Overview
 
 This is intended as a tutorial and utility for
 people who want to add a remote control to the Polyglot
@@ -40,16 +40,27 @@ to a Raspberry Pi can be found here:
 
 [PDM Remote Node Server](https://github.com/rl1131/udi-pdmremote-poly)
 
-The process for reverse engineering a remote control:
+## The process for reverse engineering a remote control:
 
 1.  Acquire an RTL-SDR radio (several versions available
 on Amazon for about $25).
 
 2.  DETERMINE THE FREQUENCY OF YOUR REMOTE...  I forgot this step 
-in my initial check-in of this tutorial.  You must spend some time 
-using one of several RTL-SDR tools to find the frequency of your
-remote control.  A good, simple to install, package is SDRSharp
-which can be downloaded from AirSpy:  [SDRSharp](https://airspy.com/download/)
+in my initial check-in of this tutorial.  There are two ways to do
+this... 1) the easy way and 2) the fun way:
+
+1) The easy way:
+
+Search either the FCC site (difficult) or use google to search
+for the FCC ID which must be listed on the remote control.  Usually
+FCC.IO (not official site) has a quick view including the frequency.
+FCC.gov has detailed information that you might spend some time looking 
+through.
+
+2) The fun way:
+You must spend some time using one of several RTL-SDR tools to find 
+the frequency of your remote control.  A good, simple to install, package 
+is SDRSharp which can be downloaded from AirSpy:  [SDRSharp](https://airspy.com/download/)
 Airspy makes SDR Hardware, but SDRSharp will work with most inexpensive
 radio dongles like the RTL-SDR.
 
@@ -59,17 +70,6 @@ scroll the frequency up and down to find this peak.  The display
 shows about 2MHz of bandwidth max and the actual remote frequencies
 range by quite a bit.  The 315 MHz band for remotes (FCC Part 15)
 is 285-322 MHz.  For 433 the range is from 420 MHz to 450 MHz.
-
-THE BIGGEST PROBLEM is finding a transmitter that transmits at the
-specific frequency.  There are currently only dirt-cheap transmitters
-available for 315MHz and 433MHz.  Other frequencies like 303MHz is also
-popular for fan remotes.  
-
-If you need another frequency you may need to do some programming
-using a CC1101 transceiver.  The RadioHead library is fairly portable
-and might be used as a basis for transmitting OOK data.  At some point
-in the near future I'll try to put something together using this CC1101
-transceiver.
 
 3.  Use [Universal Radio Hacker](https://github.com/jopohl/urh)
 to record the remote control buttons.  Below is a sophomoric video 
@@ -89,3 +89,44 @@ the remote buttons on command.
 and initialize the class PDMRemote with the data structure 
 you saved above.
 
+## Re-Transmitting the Data
+
+If you have a device that is at 315MHz or 433MHz then you can use 
+the less expensive transmitters from Amazon (or eBay or Aliexpress)
+
+[315MHz Transmitter](https://www.amazon.com/HiLetgo-Transmitter-Receiver-Arduino-Raspberry/dp/B00LNADJS6/)
+[433MHz Transmitter](https://www.amazon.com/SMAKN%C2%AE-433Mhz-Transmitter-Receiver-Arduino/dp/B00M2CUALS/)
+
+If not... don't despair the TI CC1101 radio transceiver is actually 
+a much better transmitter with better range and more flexibility.  It
+can be set to transmit from 300 MHz all the way up to 928 MHz.  The 
+downside is that it uses 7 Raspberry Pi pins instead of 3.  It is also
+a little bit more expensive.
+
+[TI CC1101](https://www.amazon.com/Solu-Wireless-Transceiver-Antenna-Arduino/dp/B00XDL9E64/)
+
+Look around... you can find similar devices for varying prices.
+
+### Antenna for the radio:
+
+If the radio you have does not have an antenna already soldered down
+(or if it is for the wrong frequency) then cut a length of wire and 
+solder it into the hole or pad marked antenna.  The wire length is
+important... use this formula to calculate the antenna wire length in 
+inches:
+
+length = 2808 / freq_mhz 
+
+For 315 MHz this would be:  2808/315 = 8.9 inches
+
+### Connecting the TI CC1101 Transceiver to Raspberry Pi
+
+Connect the CC1101 transmitter to the Raspberry Pi as shown below:
+
+![CC1101 Connect](https://user-images.githubusercontent.com/11381527/55381742-b2be5d00-54d8-11e9-81ef-5d8fe4e23cef.png)
+
+### Connecting the Cheap Transmitters to Raspberry Pi
+
+Connect the FS1000A transmitter to the Raspberry Pi as shown below:
+
+![FS1000A Connect](https://user-images.githubusercontent.com/11381527/55379682-aafbba00-54d2-11e9-86af-1d3d36695321.jpg)
