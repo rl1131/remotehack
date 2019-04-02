@@ -89,6 +89,7 @@ the remote buttons on command.
 and initialize the class PDMRemote with the data structure 
 you saved above.
 
+
 ## Re-Transmitting the Data
 
 If you have a device that is at 315MHz or 433MHz then you can use 
@@ -107,6 +108,7 @@ a little bit more expensive.
 
 Look around... you can find similar devices for varying prices.
 
+
 ### Antenna for the radio:
 
 If the radio you have does not have an antenna already soldered down
@@ -119,11 +121,15 @@ length = 2808 / freq_mhz
 
 For 315 MHz this would be:  2808/315 = 8.9 inches
 
+
+
 ### Connecting the TI CC1101 Transceiver to Raspberry Pi
 
 Connect the CC1101 transmitter to the Raspberry Pi as shown below:
 
 ![CC1101 Connect](https://user-images.githubusercontent.com/11381527/55381742-b2be5d00-54d8-11e9-81ef-5d8fe4e23cef.png)
+
+
 
 ### Connecting the Cheap Transmitters to Raspberry Pi
 
