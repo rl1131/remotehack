@@ -48,29 +48,28 @@ on Amazon for about $25).
 
 2.  DETERMINE THE FREQUENCY OF YOUR REMOTE...  I forgot this step 
 in my initial check-in of this tutorial.  There are two ways to do
-this... 1) the easy way and 2) the fun way:
+this... * The easy way or * The fun(?) way:
 
-...1) The easy way:
+    - The easy way:
+      Search either the FCC site (difficult) or use google to search
+      for the FCC ID which must be listed on the remote control.  Usually
+      FCC.IO (not official site) has a quick view including the frequency.
+      FCC.gov has detailed information that you might spend some time looking 
+      through.
 
-Search either the FCC site (difficult) or use google to search
-for the FCC ID which must be listed on the remote control.  Usually
-FCC.IO (not official site) has a quick view including the frequency.
-FCC.gov has detailed information that you might spend some time looking 
-through.
+    - The fun way:
+      You must spend some time using one of several RTL-SDR tools to find 
+      the frequency of your remote control.  A good, simple to install, package 
+      is SDRSharp which can be downloaded from AirSpy:  [SDRSharp](https://airspy.com/download/)
+      Airspy makes SDR Hardware, but SDRSharp will work with most inexpensive
+      radio dongles like the RTL-SDR.
 
-...2) The fun way:
-You must spend some time using one of several RTL-SDR tools to find 
-the frequency of your remote control.  A good, simple to install, package 
-is SDRSharp which can be downloaded from AirSpy:  [SDRSharp](https://airspy.com/download/)
-Airspy makes SDR Hardware, but SDRSharp will work with most inexpensive
-radio dongles like the RTL-SDR.
-
-Using the software watch the waterfall display to find the peak
-frequency where your remote transmits.  You will likely need to 
-scroll the frequency up and down to find this peak.  The display
-shows about 2MHz of bandwidth max and the actual remote frequencies
-range by quite a bit.  The 315 MHz band for remotes (FCC Part 15)
-is 285-322 MHz.  For 433 the range is from 420 MHz to 450 MHz.
+      Using the software watch the waterfall display to find the peak
+      frequency where your remote transmits.  You will likely need to 
+      scroll the frequency up and down to find this peak.  The display
+      shows about 2MHz of bandwidth max and the actual remote frequencies
+      range by quite a bit.  The 315 MHz band for remotes (FCC Part 15)
+      is 285-322 MHz.  For 433 the range is from 420 MHz to 450 MHz.
 
 3.  Use [Universal Radio Hacker](https://github.com/jopohl/urh)
 to record the remote control buttons.  Below is a sophomoric video 
