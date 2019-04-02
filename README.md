@@ -40,6 +40,7 @@ to a Raspberry Pi can be found here:
 
 [PDM Remote Node Server](https://github.com/rl1131/udi-pdmremote-poly)
 
+---
 ## The process for reverse engineering a remote control:
 
 1.  Acquire an RTL-SDR radio (several versions available
@@ -49,7 +50,7 @@ on Amazon for about $25).
 in my initial check-in of this tutorial.  There are two ways to do
 this... 1) the easy way and 2) the fun way:
 
-1) The easy way:
+...1) The easy way:
 
 Search either the FCC site (difficult) or use google to search
 for the FCC ID which must be listed on the remote control.  Usually
@@ -57,7 +58,7 @@ FCC.IO (not official site) has a quick view including the frequency.
 FCC.gov has detailed information that you might spend some time looking 
 through.
 
-2) The fun way:
+...2) The fun way:
 You must spend some time using one of several RTL-SDR tools to find 
 the frequency of your remote control.  A good, simple to install, package 
 is SDRSharp which can be downloaded from AirSpy:  [SDRSharp](https://airspy.com/download/)
@@ -90,6 +91,7 @@ and initialize the class PDMRemote with the data structure
 you saved above.
 
 
+---
 ## Re-Transmitting the Data
 
 If you have a device that is at 315MHz or 433MHz then you can use 
@@ -109,6 +111,7 @@ a little bit more expensive.
 Look around... you can find similar devices for varying prices.
 
 
+---
 ### Antenna for the radio:
 
 If the radio you have does not have an antenna already soldered down
@@ -122,7 +125,7 @@ length = 2808 / freq_mhz
 For 315 MHz this would be:  2808/315 = 8.9 inches
 
 
-
+---
 ### Connecting the TI CC1101 Transceiver to Raspberry Pi
 
 Connect the CC1101 transmitter to the Raspberry Pi as shown below:
@@ -131,6 +134,7 @@ Connect the CC1101 transmitter to the Raspberry Pi as shown below:
 
 
 
+---
 ### Connecting the Cheap Transmitters to Raspberry Pi
 
 Connect the FS1000A transmitter to the Raspberry Pi as shown below:
