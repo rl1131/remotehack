@@ -106,6 +106,8 @@ downside is that it uses 7 Raspberry Pi pins instead of 3.  It is also
 a little bit more expensive.
 
 [TI CC1101](https://www.amazon.com/SMAKN%C2%AE-Wireless-Technical-External-Antenna/dp/B00U5TO37W/)
+or
+[TI CC1101](https://www.amazon.com/Industrial-Grade-Wireless-Transmission-transceiver-Interface/dp/B07V2MP3SF/)
 
 Look around... you can find similar devices for varying prices.
 
