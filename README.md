@@ -105,7 +105,7 @@ can be set to transmit from 300 MHz all the way up to 928 MHz.  The
 downside is that it uses 7 Raspberry Pi pins instead of 3.  It is also
 a little bit more expensive.
 
-[TI CC1101](https://www.amazon.com/Solu-Wireless-Transceiver-Antenna-Arduino/dp/B00XDL9E64/)
+[TI CC1101](https://www.amazon.com/SMAKN%C2%AE-Wireless-Technical-External-Antenna/dp/B00U5TO37W/)
 
 Look around... you can find similar devices for varying prices.
 
